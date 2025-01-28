@@ -1,0 +1,76 @@
+.cv-modern {
+    width: 210mm;
+    min-height: 297mm;
+    padding: 25.4mm;
+    margin: 0 auto;
+    background: white;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: #2c3e50;
+}
+
+.cv-modern .cv-header {
+    border-bottom: 3px solid #4A90E2;
+    padding-bottom: 15px;
+    margin-bottom: 25px;
+}
+
+.cv-modern h1 {
+    font-size: 28px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: #2c3e50;
+}
+
+.cv-modern .contact-info {
+    display: flex;
+    gap: 20px;
+    flex-wrap: wrap;
+    font-size: 11pt;
+    color: #5a6c7d;
+}
+
+.cv-modern h2 {
+    font-size: 16pt;
+    color: #4A90E2;
+    margin: 25px 0 15px;
+    padding-bottom: 5px;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.cv-modern .section {
+    margin-bottom: 25px;
+}
+
+.cv-modern .experience-item,
+.cv-modern .education-item {
+    margin-bottom: 20px;
+}
+
+.cv-modern .item-header {
+    margin-bottom: 8px;
+}
+
+.cv-modern .item-title {
+    font-weight: 600;
+    font-size: 12pt;
+    color: #2c3e50;
+}
+
+.cv-modern .item-subtitle {
+    font-size: 11pt;
+    color: #5a6c7d;
+}
+
+.cv-modern .skills-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.cv-modern .skill {
+    background: #f5f7fa;
+    padding: 5px 12px;
+    border-radius: 3px;
+    font-size: 11pt;
+}

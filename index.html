@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CraftCV - Professional Resume Builder</title>
+    <link rel="icon" type="image/svg+xml" href="assets/icons/craftcv.svg">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/form.css">
+</head>
+<body>
+    <header>
+        <div class="logo">
+            <img src="assets/icons/craftcv.svg" alt="CraftCV Logo">
+            <h1>CraftCV</h1>
+        </div>
+    </header>
+
+    <main>
+        <div class="container">
+            <div class="template-selector">
+                <h2>Choose Template</h2>
+                <div class="template-grid">
+                    <div class="template" data-template="modern">
+                        <div class="preview modern-preview"></div>
+                        <span>Modern</span>
+                    </div>
+                    <div class="template" data-template="classic">
+                        <div class="preview classic-preview"></div>
+                        <span>Classic</span>
+                    </div>
+                    <div class="template" data-template="minimal">
+                        <div class="preview minimal-preview"></div>
+                        <span>Minimal</span>
+                    </div>
+                </div>
+            </div>
+
+            <form id="cvForm">
+                <!-- Personal Information -->
+                <section class="form-section">
+                    <h3>Personal Information</h3>
+                    <input type="text" name="fullName" placeholder="Full Name" required>
+                    <input type="email" name="email" placeholder="Email" required>
+                    <input type="tel" name="phone" placeholder="Phone">
+                    <textarea name="summary" placeholder="Professional Summary"></textarea>
+                </section>
+
+                <!-- Education -->
+                <section class="form-section" id="education">
+                    <h3>Education</h3>
+                    <div class="education-entry">
+                        <input type="text" name="degree" placeholder="Degree">
+                        <input type="text" name="school" placeholder="School">
+                        <input type="text" name="year" placeholder="Year">
+                    </div>
+                    <button type="button" class="add-btn" onclick="addEducation()">Add Education</button>
+                </section>
+
+                <!-- Experience -->
+                <section class="form-section" id="experience">
+                    <h3>Work Experience</h3>
+                    <div class="experience-entry">
+                        <input type="text" name="position" placeholder="Position">
+                        <input type="text" name="company" placeholder="Company">
+                        <input type="text" name="duration" placeholder="Duration">
+                        <textarea name="description" placeholder="Description"></textarea>
+                    </div>
+                    <button type="button" class="add-btn" onclick="addExperience()">Add Experience</button>
+                </section>
+
+                <!-- Skills -->
+                <section class="form-section">
+                    <h3>Skills</h3>
+                    <input type="text" name="skills" placeholder="Skills (comma separated)">
+                </section>
+
+                <button type="submit" class="generate-btn">Generate CV</button>
+            </form>
+
+            <div id="preview" class="preview-section hidden"></div>
+        </div>
+    </main>
+    
+    <script src="js/preview.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/generator.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/html2pdf.js/0.9.3/html2pdf.bundle.min.js"></script>
+</body>
+</html>

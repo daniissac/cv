@@ -1,0 +1,100 @@
+/* form.css */
+.form-section {
+    background: white;
+    padding: 25px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    box-shadow: var(--shadow);
+}
+
+.form-section h3 {
+    color: var(--secondary-color);
+    margin-bottom: 20px;
+    font-size: 18px;
+}
+
+input, 
+textarea {
+    width: 100%;
+    padding: 12px;
+    margin-bottom: 15px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    font-size: 14px;
+    transition: border-color 0.3s ease;
+}
+
+input:focus, 
+textarea:focus {
+    outline: none;
+    border-color: var(--primary-color);
+}
+
+textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+.education-entry, 
+.experience-entry {
+    background: #f8f9fa;
+    padding: 20px;
+    border-radius: 5px;
+    margin-bottom: 15px;
+}
+
+.add-btn, 
+.remove-btn, 
+.generate-btn {
+    padding: 12px 24px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    transition: opacity 0.3s ease;
+}
+
+.add-btn {
+    background-color: var(--primary-color);
+    color: white;
+    width: auto;
+    display: inline-block;
+    margin-bottom: 20px;
+}
+
+.remove-btn {
+    background-color: #dc3545;
+    color: white;
+    margin-top: 10px;
+}
+
+.generate-btn {
+    background-color: var(--secondary-color);
+    color: white;
+    width: 100%;
+    font-size: 16px;
+    margin-top: 20px;
+}
+
+.add-btn:hover, 
+.generate-btn:hover,
+.remove-btn:hover {
+    opacity: 0.9;
+}
+
+@media (max-width: 768px) {
+    .form-section {
+        padding: 15px;
+    }
+    
+    input, 
+    textarea {
+        padding: 10px;
+    }
+    
+    .add-btn, 
+    .remove-btn, 
+    .generate-btn {
+        padding: 10px 20px;
+    }
+}
