@@ -18,72 +18,82 @@ body {
     line-height: 1.6;
     background-color: var(--background-color);
     color: var(--text-color);
-    padding: 20px;
+    padding: 40px 20px;
 }
 
 .container {
-    max-width: 1200px;
+    max-width: 1400px;
     margin: 0 auto;
-    padding: 0 20px;
+}
+
+h1 {
+    font-size: 32px;
+    color: var(--secondary-color);
+    margin-bottom: 40px;
+    font-weight: 600;
 }
 
 .template-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 24px;
-    margin-bottom: 40px;
+    grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+    gap: 40px;
+    margin-bottom: 60px;
 }
 
 .template {
     background: white;
-    border-radius: 10px;
+    border-radius: 16px;
     box-shadow: var(--shadow);
     overflow: hidden;
     cursor: pointer;
-    transition: transform 0.3s ease;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 
 .template:hover {
-    transform: translateY(-5px);
+    transform: translateY(-8px);
+    box-shadow: 0 12px 30px rgba(0,0,0,0.15);
 }
 
 .template.selected {
-    border: 2px solid var(--primary-color);
-}
-
-.preview-container {
-    position: relative;
-    height: 400px;
-    background: white;
-    overflow: hidden;
+    border: 3px solid var(--primary-color);
+    box-shadow: 0 0 0 3px rgba(74, 144, 226, 0.2);
 }
 
 .preview {
+    height: 600px;
+    background: #f8f9fa;
+    position: relative;
+    overflow: hidden;
+    border-bottom: 1px solid var(--border-color);
+}
+
+.preview > div {
     position: absolute;
-    top: 0;
-    left: 0;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%) scale(0.4);
     width: 210mm;
     min-height: 297mm;
-    transform: scale(0.25);
-    transform-origin: top left;
     background: white;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
 }
 
 .template span {
     display: block;
-    padding: 15px;
+    padding: 24px;
     text-align: center;
-    font-size: 16px;
+    font-size: 20px;
     color: var(--secondary-color);
+    font-weight: 500;
 }
 
 #preview {
     width: 100%;
     max-width: 210mm;
-    margin: 30px auto;
+    margin: 40px auto;
     background: white;
     box-shadow: var(--shadow);
-    overflow: hidden;
+    padding: 25.4mm;
 }
 
 #preview.hidden {
@@ -95,7 +105,11 @@ body {
         grid-template-columns: 1fr;
     }
     
-    .preview-container {
-        height: 300px;
+    .preview {
+        height: 400px;
+    }
+    
+    body {
+        padding: 20px 10px;
     }
 }
